@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Container from '../layouts/Container.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../lib/data';
+---
+
+<Layout>
+  <Hero title="Emil Josefsson" />
+
+  <Container>
+    <h2 class="text-4xl font-bold tracking-tight text-slate-800">
+      Projects
+    </h2>
+
+    <div class="grid grid-cols-2 gap-4 mt-8">
+      {
+        projects?.map((project) => (
+          <ProjectCard
+            title={project.title}
+            text={project.text}
+            link={project.link}
+          />
+        ))
+      }
+    </div>
+  </Container>
+</Layout>
