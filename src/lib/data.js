@@ -2,7 +2,7 @@
 
 export const projects = [
   {
-    title: 'Productivity Enhancement', link:'', text: 'Using nudging and gamification to improve productivity in a work management platform'
+    title: 'Productivity Enhancement', link:'https://drive.google.com/file/d/1k02fv4qH0mJsnthsxDA_GxILaDvm9ce9/view?usp=sharing', text: 'Using nudging and gamification to improve productivity in a work management platform'
   },
   {
     title: 'Emotion Star', link: 'https://github.com/josefssonemil/emotion-star', text: 'A game controlled with facial expressions.'
