@@ -3,12 +3,15 @@ const { title, link, text } = Astro.props;
 ---
 
 <a
-  href={link}
   target="_blank"
-  class="rounded-lg border-[1px] py-3 px-6 bg-white/20 hover:bg-white/40 transition-all cursor-pointer flex-1"
+  href={link}
+  class={`rounded-lg border-[1px] py-3 px-6 bg-white/20 hover:bg-white/40 transition-all cursor-pointer flex-1 umami--click--${title
+    .split(' ')
+    .join('')}-button`}
 >
   <p class="tracking-tight font-bold">
     {title}
   </p>
+
   <p class="tracking-tight font-light">{text}</p>
 </a>

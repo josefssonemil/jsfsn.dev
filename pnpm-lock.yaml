@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/alpinejs': ^0.1.2
@@ -9,7 +9,7 @@ specifiers:
   tailwindcss: ^3.0.24
 
 dependencies:
-  '@astrojs/alpinejs': 0.1.2_c1634e10e0f285e84be7cb86917ba4c9
+  '@astrojs/alpinejs': 0.1.2_yfru4eha6kc6qs7hzodjc65eze
   '@astrojs/tailwind': 2.0.1_tailwindcss@3.1.8
   '@types/alpinejs': 3.7.0
   alpinejs: 3.10.3
@@ -26,7 +26,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.15
     dev: false
 
-  /@astrojs/alpinejs/0.1.2_c1634e10e0f285e84be7cb86917ba4c9:
+  /@astrojs/alpinejs/0.1.2_yfru4eha6kc6qs7hzodjc65eze:
     resolution: {integrity: sha512-pcy+r7TTeFMbdZpRUuOYbf5L3ccFp107gH9j0Hdl5z8hmrSw9918pxkK1tiAcbwrQKxifv7nM5V5FJKu7SoJrw==}
     peerDependencies:
       '@types/alpinejs': ^3.0.0
@@ -311,6 +311,8 @@ packages:
     resolution: {integrity: sha512-pJ9xOlNWHiy9+FuFP09DEAFbAn4JskgRsVcc169w2xRBC3FRGuQEwjeIMMND9L2zc0iEhO/tGv4Zq+km+hxNpQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.19.3
     dev: false
 
   /@babel/plugin-syntax-jsx/7.18.6_@babel+core@7.19.3:
