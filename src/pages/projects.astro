@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../layouts/Container.astro";
+import { Image, Picture } from "@astrojs/image/components";
+
+import { projects } from "../lib/data";
+---
+
+<style>
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+  }
+
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#222, #f222);
+  }
+
+  .link-underline:hover {
+    background-size: 100% 1px;
+    background-position: 0 100%;
+  }
+</style>
+
+<Layout>
+  <Container>
+    <div class="pt-24">
+      <div class="flex flex-col space-y-8">
+        {
+          projects.map((project, i) => (
+            <div>
+              {i !== 0 && (
+                <div class="my-8 flex space-x-2 justify-start">
+                  <div class="h-2 w-2 bg-slate-400/90 rounded-full" />
+                  <div class="h-2 w-2 bg-slate-400/90 rounded-full" />
+                  <div class="h-2 w-2 bg-slate-400/90 rounded-full" />
+                </div>
+              )}
+
+              <div class="w-full flex space-x-3 ">
+                <div class="h-full basis-1/2 opacity-60">
+                  <Picture
+                    widths={[200, 400, 600]}
+                    class="rounded-md"
+                    sizes="(max-width: 600px) 100vw, 600px"
+                    formats={["png"]}
+                    alt=""
+                    src={project.image}
+                  />
+                </div>
+                <div class="basis-1/2 flex flex-col justify-between">
+                  <div>
+                    <h2 class=" text-xl md:text-4xl text-slate-800 font-black tracking-tight">
+                      {project.title}
+                      <span class="text-md md:text-xl text-slate-700 tracking-tighter">
+                        {project.year}.
+                      </span>
+                    </h2>
+                    <p class="pt-4 text-md md:text-xl text-slate-700">
+                      {project.text}
+                    </p>
+                  </div>
+
+                  <div>
+                    <a
+                      class="mb-8 text-lg font-bold  link link-underline link-underline-black text-black"
+                      href={project.action.link}
+                      target="_blank"
+                    >
+                      {project.action.text}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</Layout>

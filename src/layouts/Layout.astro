@@ -1,4 +1,5 @@
 ---
+import Navbar from "../components/Navbar.astro";
 ---
 
 <html lang="en">
@@ -15,10 +16,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jsfsn.dev/" />
-    <meta
-      property="og:title"
-      content="jsfsn.dev - Fullstack Developer"
-    />
+    <meta property="og:title" content="jsfsn.dev - Fullstack Developer" />
     <meta
       property="og:description"
       content="Software Engineer specializing in performant and beautiful web applications."
@@ -27,38 +25,22 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://jsfsn.dev/" />
-    <meta
-      property="twitter:title"
-      content="jsfsn.dev - Fullstack Developer"
-    />
+    <meta property="twitter:title" content="jsfsn.dev - Fullstack Developer" />
     <meta
       property="twitter:description"
       content="Software Engineer specializing in performant and beautiful web applications."
     />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/glacial-indifference"
+      type="text/css"
     />
-
-    <script
-      async
-      defer
-      data-website-id="efc0cfee-29ca-4ea9-ad61-cf8f6bccf656"
-      src="https://analytics.jsfsn.dev/umami.js"
-      data-do-not-track="true"
-    ></script>
   </head>
   <body
     style="
@@ -66,6 +48,8 @@
 "
     class="max-w-screen min-h-screen"
   >
+    <Navbar />
+
     <main class="pb-16">
       <slot />
     </main>

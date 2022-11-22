@@ -1,8 +1,4 @@
 ---
-import LinkCard from './LinkCard.astro';
-import Github from './icons/Github.astro';
-import LinkedIn from './icons/LinkedIn.astro';
-
 const { title } = Astro.props;
 ---
 
@@ -10,31 +6,15 @@ const { title } = Astro.props;
   class="w-full h-[90vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-0"
 >
   <div class="flex flex-col items-start space-y-4">
-    <h1 class="text-6xl tracking-tighter font-black text-slate-800">
+    <h1 class="text-6xl tracking-tighter font-bold text-slate-800">
       {title}
+      <a href="https://inly.se" target="_blank" class="text-xl tracking-normal"
+        >@ Inly</a
+      >
     </h1>
-    <h2 class="font-light tracking-tight text-xl">
+    <h2 class="font-light tracking-tight text-2xl text-slate-700">
       Software Engineer specializing in performant and beautiful web
-      applications. | Software Engineer @ <a
-        class="font-medium"
-        target="_blank"
-        href="https://inserve.se">Inserve</a
-      >.
+      applications
     </h2>
-
-    <div class="mt-24 flex space-x-4">
-      <LinkCard
-        title="Github"
-        link="https://github.com/josefssonemil"
-      >
-        <Github />
-      </LinkCard>
-      <LinkCard
-        title="LinkedIn"
-        link="https://www.linkedin.com/in/emil-josefsson-23856b15a/"
-      >
-        <LinkedIn />
-      </LinkCard>
-    </div>
   </div>
 </div>
